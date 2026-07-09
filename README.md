@@ -61,28 +61,11 @@ runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.13.0'
 ## 📁 Project Structure
 
 src/main/java/com/theproduct/
-├── model/
-│   ├── User
-│   ├── Product
-│   └── ProductCategory
-│
-├── repository/
-│   ├── HomeRepo
-│   ├── ProductRepo
-│   ├── ProductCategoryRepo
-│   └── UserRepo
-│
-├── service/
-│   ├── HomeService
-│   ├── ProductService
-│   ├── ProductCategoryService
-│   └── UserService
-│
-├── controller/
-│   ├── HomeController
-│   ├── ProductController
-│   ├── ProductCategoryController
-│   └── UserController
+
+model/ → User, Product, ProductCategory  
+repository/ → HomeRepo, ProductRepo, ProductCategoryRepo, UserRepo  
+service/ → HomeService, ProductService, ProductCategoryService, UserService  
+controller/ → HomeController, ProductController, ProductCategoryController, UserController  
 
 ---
 
