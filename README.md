@@ -1,4 +1,4 @@
-# 🚀 TheProduct - Spring Boot Dual DB Project
+# 🚀 TheProduct - Spring Boot PostgreSQL DB Project
 
 A full-stack backend project built using **Spring Boot**, supporting **PostgreSQL + MongoDB (Dual DB)** with **JWT Authentication**, **OAuth2 (Google/GitHub)**, and **GraphQL**.
 
