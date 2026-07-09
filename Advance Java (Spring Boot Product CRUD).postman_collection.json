@@ -1,0 +1,878 @@
+{
+  "info": {
+    "_postman_id": "d7020312-325e-42de-9bd5-b7d62d60afd2",
+    "name": "Advance Java (Spring Boot Product CRUD)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1306351"
+  },
+  "item": [
+    {
+      "name": "Product List All",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-CSRF-TOKEN",
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTc4MzAwMTI0NSwiZXhwIjoxNzgzMTA5MjQ1fQ.ms-Rt0NX4o5_8eUAEcWhYZwopOXOv0dx0geFaLKK7t8",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "localhost:8080/api/products?category=Mobile Phone",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "Mobile Phone",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Get by Id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/products/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Add",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "id",
+              "value": "102",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "name",
+              "value": "Samsung Galaxy S24",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "description",
+              "value": "Flagship Samsung smartphone with premium features",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "brand",
+              "value": "Samsung",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "category",
+              "value": "Mobile Phone",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "quantity",
+              "value": "8",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "price",
+              "value": "70000.00",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "releaseDate",
+              "value": "2025-03-25",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "available",
+              "value": "true",
+              "type": "text",
+              "contentType": ""
+            },
+            {
+              "key": "imageFile",
+              "type": "file",
+              "src": [
+                "/home/rahul/Downloads/18909.jpg",
+                "/home/rahul/Pictures/Screenshots/IPhone_17.png"
+              ],
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/api/products",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "id",
+              "value": "4",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "Samsung Galaxy S24",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Flagship Samsung smartphone with premium features",
+              "type": "text"
+            },
+            {
+              "key": "brand",
+              "value": "Samsung",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "Mobile Phone",
+              "type": "text"
+            },
+            {
+              "key": "quantity",
+              "value": "8",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "70000.00",
+              "type": "text"
+            },
+            {
+              "key": "releaseDate",
+              "value": "2025-03-25",
+              "type": "text"
+            },
+            {
+              "key": "available",
+              "value": "true",
+              "type": "text"
+            },
+            {
+              "key": "imageFile",
+              "type": "file",
+              "uuid": "ddc6e301-8aee-4f80-82cf-0e8eb486c832",
+              "src": "/home/rahul/Pictures/Screenshots/Samsung_S24.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/api/products/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/products/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Search by Keyword",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:8080/api/products/search?query=smartphone",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "smartphone"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SignIn",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"user\",\n    \"password\": \"12345\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SignUp",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\":\"user\",\n    \"password\":\"12345\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Image",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/products/2/image",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "2",
+            "image"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SignOut",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/logout",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories by Name",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/product_categories/name/Mobile Phone",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories",
+            "name",
+            "Mobile Phone"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/product_categories/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/product_categories",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories Active",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/product_categories/active",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories",
+            "active"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories Exists by Name",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/product_categories/exists/Mobile Phone",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories",
+            "exists",
+            "Mobile Phone"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories Delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/product_categories/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"TV\",\n    \"description\": \"55 inch TV\",\n    \"isActive\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/product_categories",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Categories Update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"TV\",\n    \"description\": \"55 inch TV\",\n    \"isActive\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/product_categories",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "product_categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Favorite - Delete Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "userId",
+              "value": "11",
+              "type": "text",
+              "uuid": "3f043290-0ae5-4146-a57d-536786646e48"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/api/products/4/favorite",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "4",
+            "favorite"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Favorite - Add Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "userId",
+              "value": "11",
+              "type": "text",
+              "uuid": "3f043290-0ae5-4146-a57d-536786646e48"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/api/products/4/favorite",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "4",
+            "favorite"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Favorite - Is Product Favorite",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/products/2/favorite?userId=11",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "2",
+            "favorite"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "11"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Favorite - All Product List",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{AUTH_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/products/favorites?userId=11",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "products",
+            "favorites"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "11"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_1e7a",
+      "secret": true
+    }
+  ]
+}
