@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "name": "Mobile Phone",
+    "description": "smart phones",
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "Laptop",
+    "description": "gaming laptops",
+    "is_active": false
+  },
+  {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Electronics Appliance",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "TV",
+    "description": "55 inch TV",
+    "is_active": true
+  }
+]

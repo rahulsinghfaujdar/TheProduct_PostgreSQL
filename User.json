@@ -1,0 +1,14 @@
+[
+  {
+    "id": 12,
+    "username": "user1",
+    "password": "$2a$12$Kipjz4/zNPyGvupC77Jm7OOsTcY8lTxCSFKxqVwotzo8cXbimXvfq",
+    "authtoken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc4MzUyMjgwMCwiZXhwIjoxNzgzNjMwODAwfQ.5FVIMrf7JKKGKFlN_WXiIfspSpmtnGMrIUpO-O7NESw"
+  },
+  {
+    "id": 11,
+    "username": "user",
+    "password": "$2a$12$oCNlVklB/QOUcv.RCKfNo.pz5Fh4bhHMhnarJEs0S32WZOL0Rvqh.",
+    "authtoken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzgzNTI0MjczLCJleHAiOjE3ODM2MzIyNzN9.bVPCl865qp26PRM3CxCcjC4CWHKABqf9JS8OBKhd--E"
+  }
+]
